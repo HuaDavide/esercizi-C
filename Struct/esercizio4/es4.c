@@ -2,33 +2,33 @@
 #include <string.h>
 #define DIM 5
 
-typedef struct 
+typedef struct
 {
     char nome[20];
     char ruolo[20];
     char squadra[20];
 
-}calciatore_t;
+} calciatore_t;
 
 void visualizzaMilan(calciatore_t calciatori[])
 {
-    for(int i = 0; i<DIM; i++)
-        if(strcmp(calciatori[i].squadra, "milan") == 0)
+    for (int i = 0; i < DIM; i++)
+        if (strcmp(calciatori[i].squadra, "milan") == 0)
             printf("NOME: %s\n", calciatori[i].nome);
 }
 
 void visualizzaNomeC(calciatore_t calciatori[])
 {
-    for(int i = 0; i<DIM; i++)
-        if(calciatori[i].nome[0] == 'c')
-        printf("NOME: %s\n", calciatori[i].nome);
+    for (int i = 0; i < DIM; i++)
+        if (calciatori[i].nome[0] == 'c')
+            printf("NOME: %s\n", calciatori[i].nome);
 }
 
 int main()
 {
     calciatore_t calciatori[DIM];
 
-    for(int i = 0; i<DIM; i++)
+    for (int i = 0; i < DIM; i++)
     {
         printf("Inserisci il nome del calciatore: ");
         scanf("%s", calciatori[i].nome);
